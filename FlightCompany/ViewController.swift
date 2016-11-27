@@ -8,16 +8,24 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, PassengersDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        Passengers.shared.delegate = self
+        Passengers.shared.getPassenger(withEmail: "mich.basile@gmail.com")
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    }
+    
+    func didGet(_ passenger: Passenger) {
+        print("Get the passenger with email \(passenger.email!)")
+    }
+    
+    func didCreate(_ passenger: Passenger) {
+        
     }
 
 
