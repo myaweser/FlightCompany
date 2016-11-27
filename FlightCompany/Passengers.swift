@@ -15,26 +15,45 @@ class Passengers {
     let databaseRef: FIRDatabaseReference = FIRDatabase.database().reference(withPath: "passengers")
     private init() {}
     
-    func create(passenger: Passenger) -> Passenger {
-        let newPassenger = Passenger(from: passenger)
+    func getPassenger(withEmail email: String) -> Passenger? {
+        var passenger: Passenger?
+        databaseRef
+            .queryOrdered(byChild: "email")
+            .queryEqual(toValue: email)
+            .observeSingleEvent(of: .value, with: { snapshot in
+                for child in snapshot.children {
+                    let passengerSnapshot = child as! FIRDataSnapshot
+                    let passengerValue = passengerSnapshot.value as! [String : AnyObject]
+                    passenger = Passenger(id: passengerSnapshot.key,
+                                          email: passengerValue["email"] as? String,
+                                          password: nil,
+                                          name: passengerValue["name"] as? String,
+                                          surname: passengerValue["surname"] as? String)
+                    print("Get the passenger with email: \(email)")
+                }
+            })
+        return passenger
+    }
+    
+    func create(passenger: Passenger) {
         if let email = passenger.email, let password = passenger.password {
-            FIRAuth.auth()!.createUser(withEmail: email, password: password, completion: { (user, error) in
+            FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
                 if error == nil {
-                    newPassenger.id = user?.uid
-                    self.store(passenger: newPassenger)
+                    self.store(passenger: passenger)
                 } else {
                     print("Creation error: \(error!.localizedDescription)")
                 }
             })
         }
-        return newPassenger
     }
     
     private func store(passenger: Passenger) {
         if let passengerId = passenger.id {
-            databaseRef.child(passengerId).setValue(["email" : passenger.email ?? "",
-                                                     "name" : passenger.name ?? "",
-                                                     "surname" : passenger.surname ?? ""])
+            databaseRef
+                .child(passengerId)
+                .setValue(["email" : passenger.email ?? "",
+                           "name" : passenger.name ?? "",
+                           "surname" : passenger.surname ?? ""])
         }
     }
 }
