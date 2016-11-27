@@ -7,14 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E0519A71DEB231D00170392 /* Passenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0519A61DEB231D00170392 /* Passenger.swift */; };
+		7E0519A91DEB2CE100170392 /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0519A81DEB2CE100170392 /* Ticket.swift */; };
+		7E0519AB1DEB2D1E00170392 /* Flight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0519AA1DEB2D1E00170392 /* Flight.swift */; };
+		7E0519AD1DEB2E2600170392 /* SpecificFlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0519AC1DEB2E2600170392 /* SpecificFlight.swift */; };
+		7E0519AF1DEB2EF500170392 /* Gate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0519AE1DEB2EF500170392 /* Gate.swift */; };
+		7E0519B11DEB2F2000170392 /* Airport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0519B01DEB2F2000170392 /* Airport.swift */; };
+		7E0519B51DEB30CF00170392 /* Passengers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0519B41DEB30CF00170392 /* Passengers.swift */; };
+		7E0519B71DEB422800170392 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7E0519B61DEB422800170392 /* GoogleService-Info.plist */; };
 		7E8A84131DEAF06200C082CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8A84121DEAF06200C082CA /* AppDelegate.swift */; };
 		7E8A84151DEAF06200C082CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8A84141DEAF06200C082CA /* ViewController.swift */; };
 		7E8A84181DEAF06200C082CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E8A84161DEAF06200C082CA /* Main.storyboard */; };
 		7E8A841A1DEAF06200C082CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E8A84191DEAF06200C082CA /* Assets.xcassets */; };
 		7E8A841D1DEAF06200C082CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E8A841B1DEAF06200C082CA /* LaunchScreen.storyboard */; };
+		8D4F17C004FFDD56DA28AB33 /* Pods_FlightCompany.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6DAF26446D47DA7D10495A3 /* Pods_FlightCompany.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2448052F0CC68A93D0CE6394 /* Pods-FlightCompany.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlightCompany.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlightCompany/Pods-FlightCompany.debug.xcconfig"; sourceTree = "<group>"; };
+		7E0519A61DEB231D00170392 /* Passenger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Passenger.swift; sourceTree = "<group>"; };
+		7E0519A81DEB2CE100170392 /* Ticket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
+		7E0519AA1DEB2D1E00170392 /* Flight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flight.swift; sourceTree = "<group>"; };
+		7E0519AC1DEB2E2600170392 /* SpecificFlight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecificFlight.swift; sourceTree = "<group>"; };
+		7E0519AE1DEB2EF500170392 /* Gate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gate.swift; sourceTree = "<group>"; };
+		7E0519B01DEB2F2000170392 /* Airport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Airport.swift; sourceTree = "<group>"; };
+		7E0519B41DEB30CF00170392 /* Passengers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Passengers.swift; sourceTree = "<group>"; };
+		7E0519B61DEB422800170392 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7E0519B81DEB441E00170392 /* FlightCompany.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FlightCompany.entitlements; sourceTree = "<group>"; };
 		7E8A840F1DEAF06200C082CA /* FlightCompany.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlightCompany.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E8A84121DEAF06200C082CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E8A84141DEAF06200C082CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +41,8 @@
 		7E8A84191DEAF06200C082CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E8A841C1DEAF06200C082CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E8A841E1DEAF06200C082CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A6DAF26446D47DA7D10495A3 /* Pods_FlightCompany.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlightCompany.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D88F02F92C1B9F3D0806215D /* Pods-FlightCompany.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlightCompany.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlightCompany/Pods-FlightCompany.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +50,59 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D4F17C004FFDD56DA28AB33 /* Pods_FlightCompany.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		55B5170742EA372073A83859 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2448052F0CC68A93D0CE6394 /* Pods-FlightCompany.debug.xcconfig */,
+				D88F02F92C1B9F3D0806215D /* Pods-FlightCompany.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7E0519A51DEB227600170392 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7E0519B31DEB307800170392 /* DAO */,
+				7E0519B21DEB305300170392 /* Entity */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		7E0519B21DEB305300170392 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				7E0519A81DEB2CE100170392 /* Ticket.swift */,
+				7E0519AA1DEB2D1E00170392 /* Flight.swift */,
+				7E0519AC1DEB2E2600170392 /* SpecificFlight.swift */,
+				7E0519AE1DEB2EF500170392 /* Gate.swift */,
+				7E0519B01DEB2F2000170392 /* Airport.swift */,
+				7E0519A61DEB231D00170392 /* Passenger.swift */,
+			);
+			name = Entity;
+			sourceTree = "<group>";
+		};
+		7E0519B31DEB307800170392 /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				7E0519B41DEB30CF00170392 /* Passengers.swift */,
+			);
+			name = DAO;
+			sourceTree = "<group>";
+		};
 		7E8A84061DEAF06100C082CA = {
 			isa = PBXGroup;
 			children = (
 				7E8A84111DEAF06200C082CA /* FlightCompany */,
 				7E8A84101DEAF06200C082CA /* Products */,
+				55B5170742EA372073A83859 /* Pods */,
+				B659AC5F69E6A1DAC7320630 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +117,25 @@
 		7E8A84111DEAF06200C082CA /* FlightCompany */ = {
 			isa = PBXGroup;
 			children = (
+				7E0519A51DEB227600170392 /* Model */,
 				7E8A84121DEAF06200C082CA /* AppDelegate.swift */,
 				7E8A84141DEAF06200C082CA /* ViewController.swift */,
 				7E8A84161DEAF06200C082CA /* Main.storyboard */,
 				7E8A84191DEAF06200C082CA /* Assets.xcassets */,
 				7E8A841B1DEAF06200C082CA /* LaunchScreen.storyboard */,
 				7E8A841E1DEAF06200C082CA /* Info.plist */,
+				7E0519B61DEB422800170392 /* GoogleService-Info.plist */,
+				7E0519B81DEB441E00170392 /* FlightCompany.entitlements */,
 			);
 			path = FlightCompany;
+			sourceTree = "<group>";
+		};
+		B659AC5F69E6A1DAC7320630 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A6DAF26446D47DA7D10495A3 /* Pods_FlightCompany.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +145,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7E8A84211DEAF06200C082CA /* Build configuration list for PBXNativeTarget "FlightCompany" */;
 			buildPhases = (
+				EBD6ADBCC0EA0D1AF5BC7E23 /* [CP] Check Pods Manifest.lock */,
 				7E8A840B1DEAF06100C082CA /* Sources */,
 				7E8A840C1DEAF06100C082CA /* Frameworks */,
 				7E8A840D1DEAF06100C082CA /* Resources */,
+				EB39C65DADDD27C5129C9D08 /* [CP] Embed Pods Frameworks */,
+				EBBCACF1DB380926E3628E6A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -98,6 +175,11 @@
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 822778T8UA;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -125,6 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E8A841D1DEAF06200C082CA /* LaunchScreen.storyboard in Resources */,
+				7E0519B71DEB422800170392 /* GoogleService-Info.plist in Resources */,
 				7E8A841A1DEAF06200C082CA /* Assets.xcassets in Resources */,
 				7E8A84181DEAF06200C082CA /* Main.storyboard in Resources */,
 			);
@@ -132,13 +215,68 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		EB39C65DADDD27C5129C9D08 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlightCompany/Pods-FlightCompany-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EBBCACF1DB380926E3628E6A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlightCompany/Pods-FlightCompany-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EBD6ADBCC0EA0D1AF5BC7E23 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7E8A840B1DEAF06100C082CA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				7E8A84151DEAF06200C082CA /* ViewController.swift in Sources */,
+				7E0519B11DEB2F2000170392 /* Airport.swift in Sources */,
+				7E0519AD1DEB2E2600170392 /* SpecificFlight.swift in Sources */,
+				7E0519AF1DEB2EF500170392 /* Gate.swift in Sources */,
 				7E8A84131DEAF06200C082CA /* AppDelegate.swift in Sources */,
+				7E0519A71DEB231D00170392 /* Passenger.swift in Sources */,
+				7E0519AB1DEB2D1E00170392 /* Flight.swift in Sources */,
+				7E0519B51DEB30CF00170392 /* Passengers.swift in Sources */,
+				7E0519A91DEB2CE100170392 /* Ticket.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,6 +320,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -232,6 +371,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -259,8 +399,10 @@
 		};
 		7E8A84221DEAF06200C082CA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2448052F0CC68A93D0CE6394 /* Pods-FlightCompany.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FlightCompany/FlightCompany.entitlements;
 				DEVELOPMENT_TEAM = 822778T8UA;
 				INFOPLIST_FILE = FlightCompany/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -272,8 +414,10 @@
 		};
 		7E8A84231DEAF06200C082CA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D88F02F92C1B9F3D0806215D /* Pods-FlightCompany.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FlightCompany/FlightCompany.entitlements;
 				DEVELOPMENT_TEAM = 822778T8UA;
 				INFOPLIST_FILE = FlightCompany/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -302,6 +446,7 @@
 				7E8A84231DEAF06200C082CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
