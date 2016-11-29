@@ -9,11 +9,17 @@
 import Foundation
 import Firebase
 
+
+protocol PassengersDelegate : class {
+    func didGet(_ passenger: Passenger)
+    func didCreate(_ passenger: Passenger)
+}
+
 class Passengers {
     
     static let shared = Passengers()
     let databaseRef: FIRDatabaseReference = FIRDatabase.database().reference(withPath: "passengers")
-    var delegate: PassengersDelegate?
+    weak var delegate: PassengersDelegate?
     private init() {}
     
     func getPassenger(withEmail email: String) {
@@ -60,9 +66,4 @@ class Passengers {
         }
     }
     
-}
-
-protocol PassengersDelegate {
-    func didGet(_ passenger: Passenger)
-    func didCreate(_ passenger: Passenger)
 }
