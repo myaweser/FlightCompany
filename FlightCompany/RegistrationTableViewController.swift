@@ -1,5 +1,5 @@
 //
-//  LoginViewController.swift
+//  RegistrationTableViewController.swift
 //  FlightCompany
 //
 //  Created by Michele Basile on 01/12/16.
@@ -8,19 +8,27 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
-    
+class RegistrationTableViewController: UITableViewController {
+
     // MARK: - Outlets
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var confirmPasswordTextField: UITextField!
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var surnameTextField: UITextField!
     
     
-    // MARK: - Actions
+    // MARK: - Action
     
-    @IBAction func signInDidPress(_ sender: UIButton) {
+    @IBAction func cancelDidPress(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func doneDidPress(_ sender: UIBarButtonItem) {
         
     }
+    
     
     // MARK: - Controller lifecycle
     
