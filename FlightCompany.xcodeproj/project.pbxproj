@@ -15,6 +15,7 @@
 		7E0519B11DEB2F2000170392 /* Airport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0519B01DEB2F2000170392 /* Airport.swift */; };
 		7E0519B51DEB30CF00170392 /* Passengers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0519B41DEB30CF00170392 /* Passengers.swift */; };
 		7E0519B71DEB422800170392 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7E0519B61DEB422800170392 /* GoogleService-Info.plist */; };
+		7E26074B1DF03023004FDBCA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E26074A1DF03023004FDBCA /* LoginViewController.swift */; };
 		7E8A84131DEAF06200C082CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8A84121DEAF06200C082CA /* AppDelegate.swift */; };
 		7E8A84151DEAF06200C082CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8A84141DEAF06200C082CA /* ViewController.swift */; };
 		7E8A84181DEAF06200C082CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E8A84161DEAF06200C082CA /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 		7E0519B41DEB30CF00170392 /* Passengers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Passengers.swift; sourceTree = "<group>"; };
 		7E0519B61DEB422800170392 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7E0519B81DEB441E00170392 /* FlightCompany.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FlightCompany.entitlements; sourceTree = "<group>"; };
+		7E26074A1DF03023004FDBCA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7E8A840F1DEAF06200C082CA /* FlightCompany.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlightCompany.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E8A84121DEAF06200C082CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E8A84141DEAF06200C082CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +98,14 @@
 			name = DAO;
 			sourceTree = "<group>";
 		};
+		7E2607491DF03009004FDBCA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7E26074A1DF03023004FDBCA /* LoginViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		7E8A84061DEAF06100C082CA = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +127,7 @@
 		7E8A84111DEAF06200C082CA /* FlightCompany */ = {
 			isa = PBXGroup;
 			children = (
+				7E2607491DF03009004FDBCA /* Controller */,
 				7E0519A51DEB227600170392 /* Model */,
 				7E8A84121DEAF06200C082CA /* AppDelegate.swift */,
 				7E8A84141DEAF06200C082CA /* ViewController.swift */,
@@ -276,6 +287,7 @@
 				7E0519A71DEB231D00170392 /* Passenger.swift in Sources */,
 				7E0519AB1DEB2D1E00170392 /* Flight.swift in Sources */,
 				7E0519B51DEB30CF00170392 /* Passengers.swift in Sources */,
+				7E26074B1DF03023004FDBCA /* LoginViewController.swift in Sources */,
 				7E0519A91DEB2CE100170392 /* Ticket.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
