@@ -8,18 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		7E0519A71DEB231D00170392 /* Passenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0519A61DEB231D00170392 /* Passenger.swift */; };
-		7E0519A91DEB2CE100170392 /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0519A81DEB2CE100170392 /* Ticket.swift */; };
-		7E0519AB1DEB2D1E00170392 /* Flight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0519AA1DEB2D1E00170392 /* Flight.swift */; };
-		7E0519AD1DEB2E2600170392 /* SpecificFlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0519AC1DEB2E2600170392 /* SpecificFlight.swift */; };
-		7E0519AF1DEB2EF500170392 /* Gate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0519AE1DEB2EF500170392 /* Gate.swift */; };
-		7E0519B11DEB2F2000170392 /* Airport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0519B01DEB2F2000170392 /* Airport.swift */; };
 		7E0519B51DEB30CF00170392 /* Passengers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0519B41DEB30CF00170392 /* Passengers.swift */; };
 		7E0519B71DEB422800170392 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7E0519B61DEB422800170392 /* GoogleService-Info.plist */; };
 		7E26074B1DF03023004FDBCA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E26074A1DF03023004FDBCA /* LoginViewController.swift */; };
 		7E26074D1DF03B07004FDBCA /* RegistrationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E26074C1DF03B07004FDBCA /* RegistrationTableViewController.swift */; };
+		7E7F94FE1DF0C64E00757DE7 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7F94FD1DF0C64E00757DE7 /* SearchViewController.swift */; };
+		7E7F95001DF0C66C00757DE7 /* FlightsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7F94FF1DF0C66C00757DE7 /* FlightsTableViewController.swift */; };
+		7E7F95021DF0C85A00757DE7 /* FlightDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7F95011DF0C85A00757DE7 /* FlightDetailsViewController.swift */; };
+		7E7F95041DF0D1A900757DE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E7F95031DF0D1A900757DE7 /* Main.storyboard */; };
 		7E8A84131DEAF06200C082CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8A84121DEAF06200C082CA /* AppDelegate.swift */; };
-		7E8A84151DEAF06200C082CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8A84141DEAF06200C082CA /* ViewController.swift */; };
-		7E8A84181DEAF06200C082CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E8A84161DEAF06200C082CA /* Main.storyboard */; };
 		7E8A841A1DEAF06200C082CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E8A84191DEAF06200C082CA /* Assets.xcassets */; };
 		7E8A841D1DEAF06200C082CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E8A841B1DEAF06200C082CA /* LaunchScreen.storyboard */; };
 		8D4F17C004FFDD56DA28AB33 /* Pods_FlightCompany.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6DAF26446D47DA7D10495A3 /* Pods_FlightCompany.framework */; };
@@ -28,20 +25,17 @@
 /* Begin PBXFileReference section */
 		2448052F0CC68A93D0CE6394 /* Pods-FlightCompany.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlightCompany.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlightCompany/Pods-FlightCompany.debug.xcconfig"; sourceTree = "<group>"; };
 		7E0519A61DEB231D00170392 /* Passenger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Passenger.swift; sourceTree = "<group>"; };
-		7E0519A81DEB2CE100170392 /* Ticket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
-		7E0519AA1DEB2D1E00170392 /* Flight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flight.swift; sourceTree = "<group>"; };
-		7E0519AC1DEB2E2600170392 /* SpecificFlight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecificFlight.swift; sourceTree = "<group>"; };
-		7E0519AE1DEB2EF500170392 /* Gate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gate.swift; sourceTree = "<group>"; };
-		7E0519B01DEB2F2000170392 /* Airport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Airport.swift; sourceTree = "<group>"; };
 		7E0519B41DEB30CF00170392 /* Passengers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Passengers.swift; sourceTree = "<group>"; };
 		7E0519B61DEB422800170392 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7E0519B81DEB441E00170392 /* FlightCompany.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FlightCompany.entitlements; sourceTree = "<group>"; };
 		7E26074A1DF03023004FDBCA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7E26074C1DF03B07004FDBCA /* RegistrationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationTableViewController.swift; sourceTree = "<group>"; };
+		7E7F94FD1DF0C64E00757DE7 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		7E7F94FF1DF0C66C00757DE7 /* FlightsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightsTableViewController.swift; sourceTree = "<group>"; };
+		7E7F95011DF0C85A00757DE7 /* FlightDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightDetailsViewController.swift; sourceTree = "<group>"; };
+		7E7F95031DF0D1A900757DE7 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		7E8A840F1DEAF06200C082CA /* FlightCompany.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlightCompany.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E8A84121DEAF06200C082CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7E8A84141DEAF06200C082CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7E8A84171DEAF06200C082CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7E8A84191DEAF06200C082CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E8A841C1DEAF06200C082CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E8A841E1DEAF06200C082CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -82,11 +76,6 @@
 		7E0519B21DEB305300170392 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				7E0519A81DEB2CE100170392 /* Ticket.swift */,
-				7E0519AA1DEB2D1E00170392 /* Flight.swift */,
-				7E0519AC1DEB2E2600170392 /* SpecificFlight.swift */,
-				7E0519AE1DEB2EF500170392 /* Gate.swift */,
-				7E0519B01DEB2F2000170392 /* Airport.swift */,
 				7E0519A61DEB231D00170392 /* Passenger.swift */,
 			);
 			name = Entity;
@@ -105,6 +94,9 @@
 			children = (
 				7E26074A1DF03023004FDBCA /* LoginViewController.swift */,
 				7E26074C1DF03B07004FDBCA /* RegistrationTableViewController.swift */,
+				7E7F94FD1DF0C64E00757DE7 /* SearchViewController.swift */,
+				7E7F94FF1DF0C66C00757DE7 /* FlightsTableViewController.swift */,
+				7E7F95011DF0C85A00757DE7 /* FlightDetailsViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -133,9 +125,8 @@
 				7E2607491DF03009004FDBCA /* Controller */,
 				7E0519A51DEB227600170392 /* Model */,
 				7E8A84121DEAF06200C082CA /* AppDelegate.swift */,
-				7E8A84141DEAF06200C082CA /* ViewController.swift */,
-				7E8A84161DEAF06200C082CA /* Main.storyboard */,
 				7E8A84191DEAF06200C082CA /* Assets.xcassets */,
+				7E7F95031DF0D1A900757DE7 /* Main.storyboard */,
 				7E8A841B1DEAF06200C082CA /* LaunchScreen.storyboard */,
 				7E8A841E1DEAF06200C082CA /* Info.plist */,
 				7E0519B61DEB422800170392 /* GoogleService-Info.plist */,
@@ -223,7 +214,7 @@
 				7E8A841D1DEAF06200C082CA /* LaunchScreen.storyboard in Resources */,
 				7E0519B71DEB422800170392 /* GoogleService-Info.plist in Resources */,
 				7E8A841A1DEAF06200C082CA /* Assets.xcassets in Resources */,
-				7E8A84181DEAF06200C082CA /* Main.storyboard in Resources */,
+				7E7F95041DF0D1A900757DE7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,31 +273,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E8A84151DEAF06200C082CA /* ViewController.swift in Sources */,
-				7E0519B11DEB2F2000170392 /* Airport.swift in Sources */,
-				7E0519AD1DEB2E2600170392 /* SpecificFlight.swift in Sources */,
-				7E0519AF1DEB2EF500170392 /* Gate.swift in Sources */,
 				7E8A84131DEAF06200C082CA /* AppDelegate.swift in Sources */,
 				7E0519A71DEB231D00170392 /* Passenger.swift in Sources */,
-				7E0519AB1DEB2D1E00170392 /* Flight.swift in Sources */,
+				7E7F94FE1DF0C64E00757DE7 /* SearchViewController.swift in Sources */,
+				7E7F95021DF0C85A00757DE7 /* FlightDetailsViewController.swift in Sources */,
 				7E26074D1DF03B07004FDBCA /* RegistrationTableViewController.swift in Sources */,
 				7E0519B51DEB30CF00170392 /* Passengers.swift in Sources */,
 				7E26074B1DF03023004FDBCA /* LoginViewController.swift in Sources */,
-				7E0519A91DEB2CE100170392 /* Ticket.swift in Sources */,
+				7E7F95001DF0C66C00757DE7 /* FlightsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		7E8A84161DEAF06200C082CA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7E8A84171DEAF06200C082CA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		7E8A841B1DEAF06200C082CA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

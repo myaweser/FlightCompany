@@ -15,23 +15,14 @@ class Passenger {
     var password: String?
     var name: String?
     var surname: String?
-    var tickets: [Ticket]?
-    var boarding: [SpecificFlight]?
+    var tickets: [String]?
+    var boarding: [String]?
     
-    init(id: String?, email: String?, password: String?, name: String?, surname: String?) {
-        self.id = id
+    init(email: String?, password: String?, name: String?, surname: String?) {
         self.email = email
         self.password = password
         self.name = name
         self.surname = surname
-    }
-    
-    convenience init(from passenger: Passenger) {
-        self.init(id: passenger.id,
-                  email: passenger.email,
-                  password: passenger.password,
-                  name: passenger.name,
-                  surname: passenger.surname)
     }
     
 }

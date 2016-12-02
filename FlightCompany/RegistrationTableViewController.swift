@@ -9,12 +9,13 @@
 import UIKit
 
 class RegistrationTableViewController: UITableViewController {
+    
+    let passengers = Passengers.shared
 
     // MARK: - Outlets
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var confirmPasswordTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var surnameTextField: UITextField!
     
@@ -26,7 +27,15 @@ class RegistrationTableViewController: UITableViewController {
     }
     
     @IBAction func doneDidPress(_ sender: UIBarButtonItem) {
-        
+        if let email = emailTextField.text,
+            let password = passwordTextField.text,
+            let name = nameTextField.text,
+            let surname = surnameTextField.text
+        {
+            let p = Passenger(email: email, password: password, name: name, surname: surname)
+            passengers.create(passenger: p)
+            performSegue(withIdentifier: "RegistrationToTabBar", sender: nil)
+        }
     }
     
     
