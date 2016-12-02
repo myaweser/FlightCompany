@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ia3-Uc-Wrr">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -228,7 +228,7 @@
         <!--Search Flight-->
         <scene sceneID="Mzs-3P-C89">
             <objects>
-                <viewController id="Q1O-fg-zIU" userLabel="Search Flight" sceneMemberID="viewController">
+                <viewController id="Q1O-fg-zIU" userLabel="Search Flight" customClass="SearchViewController" customModule="FlightCompany" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JBw-4K-p84"/>
                         <viewControllerLayoutGuide type="bottom" id="VAz-AL-Maq"/>
@@ -291,6 +291,9 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="vFm-0J-5lb"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="arrivalAirportPicker" destination="FLt-9B-h1V" id="wKH-XQ-TWL"/>
+                        <outlet property="dateFromPicker" destination="TSC-VK-mXY" id="dEO-KK-Ema"/>
+                        <outlet property="departureAirportPicker" destination="OCB-A9-mqa" id="Vhq-YL-Clo"/>
                         <segue destination="3QL-kZ-h2k" kind="show" identifier="Flight List" id="PEx-ql-Gzq"/>
                     </connections>
                 </viewController>
