@@ -25,4 +25,13 @@ class SpecificFlight {
         self.flight = flight
     }
     
+    func toAny() -> Any? {
+        return [
+            "date" : date!,
+            "boardingStartTime" : boardingStartTime!,
+            "boardingEndTime" : boardingEndTime!,
+            "price" : price!
+        ]
+    }
+    
 }

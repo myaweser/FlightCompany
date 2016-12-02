@@ -52,6 +52,10 @@ class DatabaseDump {
             Flights.shared.store(flight: flight)
         }
         
+        for specificFlight in specificFlightDump {
+            SpecificFlights.shared.store(specificFlight: specificFlight)
+        }
+        
         
         
     }

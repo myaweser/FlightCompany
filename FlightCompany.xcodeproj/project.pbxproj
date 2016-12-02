@@ -12,6 +12,7 @@
 		7E0519B71DEB422800170392 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7E0519B61DEB422800170392 /* GoogleService-Info.plist */; };
 		7E26074B1DF03023004FDBCA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E26074A1DF03023004FDBCA /* LoginViewController.swift */; };
 		7E26074D1DF03B07004FDBCA /* RegistrationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E26074C1DF03B07004FDBCA /* RegistrationTableViewController.swift */; };
+		7E278EA91DF1B02400EE08E8 /* SpecificFlights.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E278EA81DF1B02400EE08E8 /* SpecificFlights.swift */; };
 		7E592A771DF1791A006F29A7 /* Airport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E592A761DF1791A006F29A7 /* Airport.swift */; };
 		7E592A791DF179FC006F29A7 /* Airports.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E592A781DF179FC006F29A7 /* Airports.swift */; };
 		7E592A7B1DF1822B006F29A7 /* Flight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E592A7A1DF1822B006F29A7 /* Flight.swift */; };
@@ -36,6 +37,7 @@
 		7E0519B81DEB441E00170392 /* FlightCompany.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FlightCompany.entitlements; sourceTree = "<group>"; };
 		7E26074A1DF03023004FDBCA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7E26074C1DF03B07004FDBCA /* RegistrationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationTableViewController.swift; sourceTree = "<group>"; };
+		7E278EA81DF1B02400EE08E8 /* SpecificFlights.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecificFlights.swift; sourceTree = "<group>"; };
 		7E592A761DF1791A006F29A7 /* Airport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Airport.swift; sourceTree = "<group>"; };
 		7E592A781DF179FC006F29A7 /* Airports.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Airports.swift; sourceTree = "<group>"; };
 		7E592A7A1DF1822B006F29A7 /* Flight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flight.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				7E592A781DF179FC006F29A7 /* Airports.swift */,
 				7E592A7C1DF183E7006F29A7 /* DatabaseDump.swift */,
 				7E592A801DF18EDC006F29A7 /* Flights.swift */,
+				7E278EA81DF1B02400EE08E8 /* SpecificFlights.swift */,
 			);
 			name = DAO;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				7E592A771DF1791A006F29A7 /* Airport.swift in Sources */,
 				7E8A84131DEAF06200C082CA /* AppDelegate.swift in Sources */,
 				7E0519A71DEB231D00170392 /* Passenger.swift in Sources */,
+				7E278EA91DF1B02400EE08E8 /* SpecificFlights.swift in Sources */,
 				7E7F94FE1DF0C64E00757DE7 /* SearchViewController.swift in Sources */,
 				7E7F95021DF0C85A00757DE7 /* FlightDetailsViewController.swift in Sources */,
 				7E26074D1DF03B07004FDBCA /* RegistrationTableViewController.swift in Sources */,
