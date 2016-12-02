@@ -27,6 +27,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        DatabaseDump.shared.populate()
     }
 
     override func didReceiveMemoryWarning() {

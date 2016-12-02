@@ -18,10 +18,7 @@ class Passengers {
     
     // Reference in JSON tree
     let databaseRef: FIRDatabaseReference = FIRDatabase.database().reference(withPath: "passengers")
-    
-    // Store data about current logged user
-    var currentPassenger: Passenger?
-    
+
     
     func create(passenger: Passenger, completion: ((Passenger?, Error?) -> Void)? = nil) {
         if let email = passenger.email, let password = passenger.password {
