@@ -21,4 +21,15 @@ class Airports {
         databaseRef.child(airport.key!).setValue(airport.toAny())
     }
     
+    func getAll(completion: @escaping ([Airport]) -> Void) {
+        databaseRef.observe(.value, with: { snapshot in
+            var airports: [Airport] = []
+            for child in snapshot.children {
+                let airport = Airport(snapshot: child as! FIRDataSnapshot)
+                airports.append(airport)
+            }
+            completion(airports)
+        })
+    }
+    
 }

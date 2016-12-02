@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Firebase
 
 class Airport {
 
@@ -17,6 +18,13 @@ class Airport {
     init(code: String, locality: String) {
         self.code = code
         self.locality = locality
+    }
+    
+    init(snapshot: FIRDataSnapshot) {
+        self.key = snapshot.key
+        let snapValue = snapshot.value as! [String : AnyObject]
+        self.code = snapValue["code"] as? String
+        self.locality = snapValue["locality"] as? String
     }
     
     func toAny() -> Any? {
