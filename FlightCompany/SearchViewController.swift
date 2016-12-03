@@ -11,6 +11,7 @@ import UIKit
 class SearchViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
     var airportsList: [Airport] = []
+    var searchRequest: (departureLocality: String, arrivalLocality: String, dateFrom: String)?
 
     // MARK: - Outlets
     
@@ -35,13 +36,36 @@ class SearchViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     }
     
     
+    // MARK: - Actions
+    
+    @IBAction func searchDidPress(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "Flight List", sender: nil)
+    }
+    
+    
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "Flight List" {
+            if let flightListTVC = segue.destination as? FlightsTableViewController {
+                let departureAirport = airportsList[departureAirportPicker.selectedRow(inComponent: 0)]
+                let arrivalAirport = airportsList[arrivalAirportPicker.selectedRow(inComponent: 0)]
+                SpecificFlights.shared.get(from: departureAirport, to: arrivalAirport, dateFrom: "2016/12/22", completion: { specificFlights in
+                    let s = specificFlights
+                    print("hello")
+                })
+            }
+        }
+    }
+    
+    
     // MARK: - Controller Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Get all airport entries from firebase
-        Airports.shared.getAll { (airports) in
+        Airports.shared.getAll { airports in
             self.airportsList = airports
             self.departureAirportPicker.reloadAllComponents()
             self.arrivalAirportPicker.reloadAllComponents()

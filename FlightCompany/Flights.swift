@@ -30,4 +30,5 @@ class Flights {
         arrivalAirportRef.updateChildValues([flight.key! : true])
         departureAirportRef.updateChildValues([flight.key! : true])
     }
+    
 }

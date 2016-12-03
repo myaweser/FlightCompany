@@ -31,4 +31,35 @@ class SpecificFlights {
         
     }
     
+    func get(from departureAirport: Airport, to arrivalAirport: Airport, dateFrom: String, completion: @escaping ([SpecificFlight]) -> Void) {
+        
+        var specificFlightsList: [SpecificFlight] = []
+        
+        Flights.shared.databaseRef
+            .queryOrdered(byChild: "departureArrivalAirportKeys")
+            .queryEqual(toValue: departureAirport.key! + arrivalAirport.key!)
+            .observeSingleEvent(of: .value, with: { flightsSnap in
+                var flightsIteration: UInt = 0
+                for flightChild in flightsSnap.children {
+                    let flight = Flight(snapshot: flightChild as! FIRDataSnapshot)
+                    self.databaseRef
+                        .queryOrdered(byChild: "flight")
+                        .queryEqual(toValue: flight.key!)
+                        .observeSingleEvent(of: .value, with: { specificFlightsSnap in
+                            flightsIteration += 1
+                            var specificFlightsIteration: UInt = 0
+                            for specificFlightChild in specificFlightsSnap.children {
+                                specificFlightsIteration += 1
+                                let specificFlight = SpecificFlight(snapshot: specificFlightChild as! FIRDataSnapshot, flight: flight)
+                                specificFlightsList.append(specificFlight)
+                                if flightsIteration == flightsSnap.childrenCount && specificFlightsIteration == specificFlightsSnap.childrenCount {
+                                    // we got all the specific flight entries
+                                    completion(specificFlightsList)
+                                }
+                            }
+                        })
+                }
+            })
+    }
+    
 }

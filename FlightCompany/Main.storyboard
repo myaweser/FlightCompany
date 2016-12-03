@@ -288,7 +288,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Search" id="fHf-8o-JaP">
-                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="vFm-0J-5lb"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="vFm-0J-5lb">
+                            <connections>
+                                <action selector="searchDidPress:" destination="Q1O-fg-zIU" id="AHe-BE-l0o"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="arrivalAirportPicker" destination="FLt-9B-h1V" id="wKH-XQ-TWL"/>
@@ -304,7 +308,7 @@
         <!--Flights List-->
         <scene sceneID="efa-4k-laA">
             <objects>
-                <tableViewController id="3QL-kZ-h2k" userLabel="Flights List" sceneMemberID="viewController">
+                <tableViewController id="3QL-kZ-h2k" userLabel="Flights List" customClass="FlightsTableViewController" customModule="FlightCompany" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="144" sectionHeaderHeight="28" sectionFooterHeight="28" id="qxZ-K3-UF7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

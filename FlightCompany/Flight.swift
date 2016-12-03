@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Firebase
 
 class Flight {
     
@@ -25,11 +26,21 @@ class Flight {
         self.arrivalAirport = arrivalAirport
     }
     
+    init(snapshot: FIRDataSnapshot) {
+        self.key = snapshot.key
+        let snapValue = snapshot.value as! [String : AnyObject]
+        self.departureTime = snapValue["departureTime"] as? String
+        self.arrivalTime = snapValue["arrivalTime"] as? String
+    }
+    
     func toAny() -> Any? {
         return [
             "code" : code!,
             "departureTime" : departureTime!,
-            "arrivalTime" : arrivalTime!
+            "arrivalTime" : arrivalTime!,
+            "departureAirport" : departureAirport!.key!,
+            "arrivalAirport" : arrivalAirport!.key!,
+            "departureArrivalAirportKeys" : departureAirport!.key! + arrivalAirport!.key!
         ]
     }
     

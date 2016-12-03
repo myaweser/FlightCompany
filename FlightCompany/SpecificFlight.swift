@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Firebase
 
 class SpecificFlight {
     
@@ -25,12 +26,23 @@ class SpecificFlight {
         self.flight = flight
     }
     
+    init(snapshot: FIRDataSnapshot, flight: Flight) {
+        self.key = snapshot.key
+        let snapValue = snapshot.value as! [String : AnyObject]
+        self.date = snapValue["date"] as? String
+        self.boardingStartTime = snapValue["boardingStartTime"] as? String
+        self.boardingEndTime = snapValue["boardingEndTime"] as? String
+        self.price = snapValue["price"] as? String
+        self.flight = flight
+    }
+    
     func toAny() -> Any? {
         return [
             "date" : date!,
             "boardingStartTime" : boardingStartTime!,
             "boardingEndTime" : boardingEndTime!,
-            "price" : price!
+            "price" : price!,
+            "flight" : flight!.key!
         ]
     }
     
