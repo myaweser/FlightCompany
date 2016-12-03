@@ -39,25 +39,49 @@ class SpecificFlights {
             .queryOrdered(byChild: "departureArrivalAirportKeys")
             .queryEqual(toValue: departureAirport.key! + arrivalAirport.key!)
             .observeSingleEvent(of: .value, with: { flightsSnap in
-                var flightsIteration: UInt = 0
+                
+                var flightIteration: UInt = 1
+                var specificFlightIteration: UInt = 0
+                
                 for flightChild in flightsSnap.children {
-                    let flight = Flight(snapshot: flightChild as! FIRDataSnapshot)
-                    self.databaseRef
-                        .queryOrdered(byChild: "flight")
-                        .queryEqual(toValue: flight.key!)
-                        .observeSingleEvent(of: .value, with: { specificFlightsSnap in
-                            flightsIteration += 1
-                            var specificFlightsIteration: UInt = 0
-                            for specificFlightChild in specificFlightsSnap.children {
-                                specificFlightsIteration += 1
-                                let specificFlight = SpecificFlight(snapshot: specificFlightChild as! FIRDataSnapshot, flight: flight)
-                                specificFlightsList.append(specificFlight)
-                                if flightsIteration == flightsSnap.childrenCount && specificFlightsIteration == specificFlightsSnap.childrenCount {
-                                    // we got all the specific flight entries
+                    
+                    // Create a flight object from a snapshot child
+                    let flightChildSnap = flightChild as! FIRDataSnapshot
+                    let flight = Flight(snapshot: flightChildSnap)
+                    
+                    // Retrieve specific flight keys (a flight could have more specificFlights)
+                    let flightChildSnapValue = flightChildSnap.value as! [String : AnyObject]
+                    let specificFlightsKeys = flightChildSnapValue["specificFlights"] as! [String : Bool]
+                
+                    
+                    // Retrieve specific flight objects
+                    
+                    let numberOfSpecificFlights = UInt(specificFlightsKeys.count)
+                    
+                    for (specificFlightKey, _) in specificFlightsKeys {
+                        self.databaseRef.child(specificFlightKey)
+                            .observeSingleEvent(of: .value, with: { specificFlightSnap in
+                                
+                                // Iteration tracking
+                                specificFlightIteration += 1
+                                if specificFlightIteration > numberOfSpecificFlights {
+                                    specificFlightIteration = 1
+                                    flightIteration += 1
+                                }
+                                
+                                let specificFlightSnapValue = specificFlightSnap.value as! [String : String]
+                                if specificFlightSnapValue["date"]! >= dateFrom {
+                                    let specificFlight = SpecificFlight(snapshot: specificFlightSnap, flight: flight)
+                                    specificFlightsList.append(specificFlight)
+                                }
+                                // Completion call if we get all entries
+                                if flightIteration == flightsSnap.childrenCount && specificFlightIteration == numberOfSpecificFlights {
                                     completion(specificFlightsList)
                                 }
-                            }
-                        })
+            
+                            })
+                    }
+                    
                 }
             })
     }
