@@ -47,7 +47,7 @@ class SpecificFlights {
                     
                     // Create a flight object from a snapshot child
                     let flightChildSnap = flightChild as! FIRDataSnapshot
-                    let flight = Flight(snapshot: flightChildSnap)
+                    let flight = Flight(snapshot: flightChildSnap, departureAirport: departureAirport, arrivalAirport: arrivalAirport)
                     
                     // Retrieve specific flight keys (a flight could have more specificFlights)
                     let flightChildSnapValue = flightChildSnap.value as! [String : AnyObject]

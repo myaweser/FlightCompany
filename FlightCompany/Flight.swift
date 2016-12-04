@@ -26,11 +26,13 @@ class Flight {
         self.arrivalAirport = arrivalAirport
     }
     
-    init(snapshot: FIRDataSnapshot) {
+    init(snapshot: FIRDataSnapshot, departureAirport: Airport, arrivalAirport: Airport) {
         self.key = snapshot.key
         let snapValue = snapshot.value as! [String : AnyObject]
         self.departureTime = snapValue["departureTime"] as? String
         self.arrivalTime = snapValue["arrivalTime"] as? String
+        self.departureAirport = departureAirport
+        self.arrivalAirport = arrivalAirport
     }
     
     func toAny() -> Any? {

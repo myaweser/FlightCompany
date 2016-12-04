@@ -19,6 +19,7 @@
 		7E592A7D1DF183E7006F29A7 /* DatabaseDump.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E592A7C1DF183E7006F29A7 /* DatabaseDump.swift */; };
 		7E592A7F1DF18684006F29A7 /* SpecificFlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E592A7E1DF18684006F29A7 /* SpecificFlight.swift */; };
 		7E592A811DF18EDC006F29A7 /* Flights.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E592A801DF18EDC006F29A7 /* Flights.swift */; };
+		7E7F2A7E1DF42C94001AA6C1 /* FlightTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7F2A7D1DF42C94001AA6C1 /* FlightTableViewCell.swift */; };
 		7E7F94FE1DF0C64E00757DE7 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7F94FD1DF0C64E00757DE7 /* SearchViewController.swift */; };
 		7E7F95001DF0C66C00757DE7 /* FlightsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7F94FF1DF0C66C00757DE7 /* FlightsTableViewController.swift */; };
 		7E7F95021DF0C85A00757DE7 /* FlightDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7F95011DF0C85A00757DE7 /* FlightDetailsViewController.swift */; };
@@ -44,6 +45,7 @@
 		7E592A7C1DF183E7006F29A7 /* DatabaseDump.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseDump.swift; sourceTree = "<group>"; };
 		7E592A7E1DF18684006F29A7 /* SpecificFlight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecificFlight.swift; sourceTree = "<group>"; };
 		7E592A801DF18EDC006F29A7 /* Flights.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flights.swift; sourceTree = "<group>"; };
+		7E7F2A7D1DF42C94001AA6C1 /* FlightTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightTableViewCell.swift; sourceTree = "<group>"; };
 		7E7F94FD1DF0C64E00757DE7 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		7E7F94FF1DF0C66C00757DE7 /* FlightsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightsTableViewController.swift; sourceTree = "<group>"; };
 		7E7F95011DF0C85A00757DE7 /* FlightDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightDetailsViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				7E26074C1DF03B07004FDBCA /* RegistrationTableViewController.swift */,
 				7E7F94FD1DF0C64E00757DE7 /* SearchViewController.swift */,
 				7E7F94FF1DF0C66C00757DE7 /* FlightsTableViewController.swift */,
+				7E7F2A7D1DF42C94001AA6C1 /* FlightTableViewCell.swift */,
 				7E7F95011DF0C85A00757DE7 /* FlightDetailsViewController.swift */,
 			);
 			name = Controller;
@@ -299,6 +302,7 @@
 				7E0519A71DEB231D00170392 /* Passenger.swift in Sources */,
 				7E278EA91DF1B02400EE08E8 /* SpecificFlights.swift in Sources */,
 				7E7F94FE1DF0C64E00757DE7 /* SearchViewController.swift in Sources */,
+				7E7F2A7E1DF42C94001AA6C1 /* FlightTableViewCell.swift in Sources */,
 				7E7F95021DF0C85A00757DE7 /* FlightDetailsViewController.swift in Sources */,
 				7E26074D1DF03B07004FDBCA /* RegistrationTableViewController.swift in Sources */,
 				7E0519B51DEB30CF00170392 /* Passengers.swift in Sources */,

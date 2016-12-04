@@ -11,7 +11,6 @@ import UIKit
 class SearchViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
     var airportsList: [Airport] = []
-    var searchRequest: (departureLocality: String, arrivalLocality: String, dateFrom: String)?
 
     // MARK: - Outlets
     
@@ -43,16 +42,31 @@ class SearchViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     }
     
     
+    // MARK: - Utils
+    
+    func getSearchParameters() -> (departure: Airport, arrival: Airport, date: String) {
+        let departureAirport = airportsList[departureAirportPicker.selectedRow(inComponent: 0)]
+        let arrivalAirport = airportsList[arrivalAirportPicker.selectedRow(inComponent: 0)]
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy/MM/dd"
+        let dateFrom =  dateFormatter.string(from: dateFromPicker.date)
+        return (departureAirport, arrivalAirport, dateFrom)
+    }
+    
+    
     // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "Flight List" {
             if let flightListTVC = segue.destination as? FlightsTableViewController {
-                let departureAirport = airportsList[departureAirportPicker.selectedRow(inComponent: 0)]
-                let arrivalAirport = airportsList[arrivalAirportPicker.selectedRow(inComponent: 0)]
-                SpecificFlights.shared.get(from: departureAirport, to: arrivalAirport, dateFrom: "2016/12/22", completion: { specificFlights in
-                    let s = specificFlights
-                    print("hello")
+                
+                // Retrieve search parameters from outlets
+                let (departureAirport, arrivalAirport, dateFrom) = getSearchParameters()
+                
+                // Database querying
+                SpecificFlights.shared.get(from: departureAirport, to: arrivalAirport, dateFrom: dateFrom, completion: { specificFlights in
+                    // Injection into flight list controller
+                    flightListTVC.flights = specificFlights
                 })
             }
         }

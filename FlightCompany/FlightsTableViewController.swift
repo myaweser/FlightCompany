@@ -11,7 +11,7 @@ import UIKit
 class FlightsTableViewController: UITableViewController {
     
     // This property will be injected by the prepare for segue
-    var flights: [(route: String, date: String, time: String)]? {
+    var flights: [SpecificFlight]? {
         didSet {
             self.tableView.reloadData()
         }
@@ -35,15 +35,16 @@ class FlightsTableViewController: UITableViewController {
         return flights?.count ?? 0
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let specificFlight = flights![indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Flight Cell", for: indexPath) as! FlightTableViewCell
+        let startLocality = specificFlight.flight!.departureAirport!.locality!
+        let endLocality = specificFlight.flight!.arrivalAirport!.locality!
+        cell.routeLabel.text = "\(startLocality) → \(endLocality)"
+        cell.dateLabel.text = specificFlight.date!
+        cell.timeLabel.text = "\(specificFlight.flight!.departureTime!) - \(specificFlight.flight!.arrivalTime!)"
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
