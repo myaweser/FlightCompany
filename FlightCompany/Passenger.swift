@@ -15,8 +15,6 @@ class Passenger {
     var password: String?
     var name: String?
     var surname: String?
-    var tickets: [String]?
-    var boarding: [String]?
     
     init(email: String?, password: String?, name: String?, surname: String?) {
         self.email = email
